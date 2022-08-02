@@ -23,4 +23,12 @@ describe('SimpleStorage', function () {
         const newValue = await simpleStorage.retrieve()
         expect(newValue.toString()).to.eql('7')
     })
+
+    it('should add person to the list', async function () {
+        const txResponse = await simpleStorage.addPerson('John', 5)
+        await txResponse.wait(1)
+        const addedPerson = await simpleStorage.people(0)
+        console.log(addedPerson)
+        expect(addedPerson).to.include('John')
+    })
 })
