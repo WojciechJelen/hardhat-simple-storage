@@ -31,7 +31,7 @@ async function main() {
     console.log(`New value: ${newValue}`)
 }
 
-const verifyContract = async (contractAddress: string, args?: any) => {
+const verifyContract = async (contractAddress: string, args?: any[]) => {
     try {
         /**
          * "run" lets you to run different hardhat commands programmatically

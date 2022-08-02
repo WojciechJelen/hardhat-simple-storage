@@ -3,10 +3,8 @@ import '@nomiclabs/hardhat-etherscan'
 import '@nomicfoundation/hardhat-toolbox'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import './tasks/block-number'
-
-dotenv.config()
 
 const GOERLI_URL = process.env.GOERLI_RPC_URL || 'http://localhost:8545'
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '0x'
